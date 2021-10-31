@@ -8,7 +8,7 @@
                 <div class="post__date">{{ post.date_pub }}</div>
                 <div class="post__title">{{ post.title }}</div>
                 <div class="post__body">{{ post.body }}</div>
-                <a class="post__button" href="{% url 'post_detail' slug=post.slug %}">Read</a>
+                <a class="post__button" href="{{ post.get_absolute_url }}">Read</a>
             </div>
             {% endfor %}
         </div>
