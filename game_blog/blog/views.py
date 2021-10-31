@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from game_blog.blog.models import Post
 
 
-def index(request):
-    return render(request, 'blog/index.html', context={'request': request.headers})
+def posts_list(request):
+    posts = Post.objects.all()
+    return render(request, 'blog/index.html', context={'posts': posts})

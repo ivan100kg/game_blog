@@ -2,18 +2,11 @@
 <h1>Index.html</h1>
 <div class="content">
     <div class="container">
-        <table class="content__table table">
-            <tr>
-                <th>header</th>
-                <th>value</th>
-            </tr>
-            {% for key, value in request.items %}
-            <tr class="content__items">
-                <td class="content__key">{{ key }}</td>
-                <td class="content__value">{{ value }}</td>
-            </tr>
+        <div class="content__row">
+            {% for post in posts %}
+            <div class="content__item post">{{ post }}</div>
             {% endfor %}
-        </table>
+        </div>
     </div>
 </div>
 {% endblock %}
