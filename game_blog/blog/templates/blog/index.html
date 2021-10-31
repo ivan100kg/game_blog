@@ -2,9 +2,14 @@
 <h1>Index.html</h1>
 <div class="content">
     <div class="container">
+        <div class="content__title">Posts</div>
         <div class="content__row">
             {% for post in posts %}
-            <div class="content__item post">{{ post }}</div>
+            <div class="content__item post">
+                <div class="post__date">{{ post.date_pub }}</div>
+                <div class="post__title">{{ post.title }}</div>
+                <div class="post__body">{{ post.body }}</div>
+            </div>
             {% endfor %}
         </div>
     </div>

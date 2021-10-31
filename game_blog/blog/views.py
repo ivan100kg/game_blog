@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from game_blog.blog.models import Post
+from blog.models import Post
 
 
 def posts_list(request):

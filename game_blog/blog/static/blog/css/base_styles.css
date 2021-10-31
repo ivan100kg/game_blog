@@ -108,7 +108,23 @@ h1 {
     margin: 10px;
 }
 
-.content__items {}
+.content__title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.content__row{}
+.content__item {
+    display: block;
+}
+.post__date{
+    display: inline;
+}
+.post__title{
+    display: inline;
+}
+.post__body{
+    display: inline;
+}
 
 .content__key {
     padding: 5px;
