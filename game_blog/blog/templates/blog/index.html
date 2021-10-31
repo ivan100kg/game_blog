@@ -6,8 +6,8 @@
             {% for post in posts %}
             <div class="content__item post">
                 <div class="post__date">{{ post.date_pub }}</div>
-                <div class="post__title">{{ post.title }}</div>
-                <div class="post__body">{{ post.body }}</div>
+                <div class="post__title">{{ post.title|upper }}</div>
+                <div class="post__body">{{ post.body|truncatewords:16 }}</div>
                 <a class="post__button" href="{{ post.get_absolute_url }}">Read</a>
             </div>
             {% endfor %}
