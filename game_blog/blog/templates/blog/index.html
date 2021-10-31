@@ -1,5 +1,4 @@
 {% extends 'blog/base_blog.html' %} {% block content %}
-<h1>Index.html</h1>
 <div class="content">
     <div class="container">
         <div class="content__title">Posts</div>
@@ -9,6 +8,7 @@
                 <div class="post__date">{{ post.date_pub }}</div>
                 <div class="post__title">{{ post.title }}</div>
                 <div class="post__body">{{ post.body }}</div>
+                <button class="post__button">Read</button>
             </div>
             {% endfor %}
         </div>

@@ -102,36 +102,72 @@ h1 {
     font-weight: 700;
 }
 
-.content {}
+.content {
+    background-color: #ccc;
+    flex: 1 1 auto;
+    padding: 10px;
+}
 
 .container {
-    margin: 10px;
+    max-width: 400px;
+    margin: 0px auto;
+
+
 }
 
 .content__title{
     font-size: 20px;
     font-weight: 700;
 }
-.content__row{}
+.content__row{
+    display: flex;
+    flex-direction: column;
+}
 .content__item {
+    background-color: #eee;
     display: block;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+
 }
 .post__date{
-    display: inline;
+    display: block;
+    margin: 0 0 5px 0;
 }
 .post__title{
-    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
 }
 .post__body{
-    display: inline;
+    display: block;
 }
 
-.content__key {
-    padding: 5px;
+.post__button{
+    background-color: #FFFFAA;
 }
 
-.content__value {}
+/* Navbar */
+.navbar{
+    background-color: #FFFFAA;
+}
 
-.table {
-    border: 1px solid black;
+.navbar__row{
+    display: flex;
+}
+.navbar__title{
+    background-color: #AAFFAA;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+}
+.navbar__item{
+    display: block;
+    padding: 10px;
+
+}
+.navbar__link{
+    color: black;
 }
