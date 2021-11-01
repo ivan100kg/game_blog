@@ -1,1 +1,3 @@
-{% extends 'blog/base_blog.html' %} {% block title %}{{ tag.title }}}}{% endblock %} {% block content %} {{ tag.title }} {% endblock %}
+{% extends 'blog/base_blog.html' %} {% block title %}{{ tag.title }}{% endblock %} {% block content %} {{ tag.title }} {% for post in tag.posts.all %}
+<div>{{ post.title }}</div>
+{% endfor %} {% endblock %}
