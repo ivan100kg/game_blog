@@ -1,5 +1,14 @@
 {% extends 'blog/base_blog.html' %} {% block title %} Tags list - {{ block.super }} {% endblock %} {% block content %}
-<h1>Tags:</h1>
-{% for tag in tags %}
-<div class="tag">{{ tag.title }}</div>
-{% endfor %} {% endblock %}
+<div class="content">
+    <div class="container">
+        <div class="content__title">Tags:</div>
+        <div class="content__row">
+            {% for tag in tags %}
+            <div class="content__item tag">
+                <div class="tag__title">{{ tag.title }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
