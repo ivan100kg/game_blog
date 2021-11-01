@@ -6,6 +6,7 @@
             {% for tag in tags %}
             <div class="content__item tag">
                 <div class="tag__title">{{ tag.title }}</div>
+                <a class="post__button" href="{{ tag.get_absolute_url }}">Read</a>
             </div>
             {% endfor %}
         </div>
