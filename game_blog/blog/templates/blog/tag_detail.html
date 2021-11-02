@@ -1,3 +1,10 @@
-{% extends 'blog/base_blog.html' %} {% block title %}{{ tag.title }}{% endblock %} {% block content %} {{ tag.title }} {% for post in tag.posts.all %}
-<div>{{ post.title }}</div>
-{% endfor %} {% endblock %}
+{% extends 'blog/base_blog.html' %}
+{% block title %}
+    {{ tag.title }}
+{% endblock %}
+
+{% block text %}
+    {% for post in tag.posts.all %}
+        {% include 'blog/includes/post_card.html' %}
+    {% endfor %}
+{% endblock %}

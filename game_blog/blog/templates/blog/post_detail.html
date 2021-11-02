@@ -1,6 +1,11 @@
 {% extends 'blog/base_blog.html' %}
-{% block title %}{{ post.title }}}}{% endblock %}
-{% block content %}
-{{ post.title }}
-{{ post.body }}
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block text %}
+<div class="content__item">
+    <div class="post__title">{{ post.title|upper }}</div>
+    <div class="post__body">{{ post.body }}</div>
+</div>
 {% endblock %}

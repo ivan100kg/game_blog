@@ -1,15 +1,20 @@
-{% extends 'blog/base_blog.html' %} {% block title %} Tags list - {{ block.super }} {% endblock %} {% block content %}
-<div class="content">
-    <div class="container">
-        <div class="content__title">Tags:</div>
-        <div class="content__row">
-            {% for tag in tags %}
-            <div class="content__item tag">
-                <div class="tag__title">{{ tag.title }}</div>
-                <a class="post__button" href="{{ tag.get_absolute_url }}">Read</a>
+{% extends 'blog/base_blog.html' %}
+{% block title %}
+    Tags list - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            {% comment %} <div class="content__title">Tags:</div> {% endcomment %}
+            <div class="content__row">
+                {% for tag in tags %}
+                <div class="content__item tag">
+                    <div class="tag__title">{{ tag.title }}</div>
+                    <a class="post__button" href="{{ tag.get_absolute_url }}">Read</a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
 {% endblock %}
