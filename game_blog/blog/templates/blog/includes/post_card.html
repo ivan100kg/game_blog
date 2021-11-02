@@ -3,4 +3,7 @@
     <div class="post__title">{{ post.title|upper }}</div>
     <div class="post__body">{{ post.body|truncatewords:16 }}</div>
     <a class="post__button" href="{{ post.get_absolute_url }}">Read</a>
+    <div class="post__tags"> tags: {% for tag in post.tags.all %}
+        <a class="tag-link" href="{{ tag.get_absolute_url }}">{{ tag.title }}</a> {% endfor %}
+    </div>
 </div>
